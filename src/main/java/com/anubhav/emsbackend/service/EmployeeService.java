@@ -6,4 +6,5 @@ import com.anubhav.emsbackend.entity.Employee;
 public interface EmployeeService{
     public EmployeeDto createEmployee(EmployeeDto employeeDto);
 
+    public EmployeeDto getEmployeeByid(Long id);
 }

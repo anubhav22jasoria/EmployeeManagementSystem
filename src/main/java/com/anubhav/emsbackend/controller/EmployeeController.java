@@ -22,4 +22,9 @@ public class EmployeeController {
         return new ResponseEntity<>(createdEmployee, HttpStatus.CREATED);
     }
 
+    @GetMapping("{id}")
+    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("id") Long id){
+        EmployeeDto employeeDto = employeeService.getEmployeeByid(id);
+        return new ResponseEntity<>(employeeDto,HttpStatus.OK);
+    }
 }
